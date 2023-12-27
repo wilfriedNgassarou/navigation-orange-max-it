@@ -10,6 +10,8 @@ const bundleArticleWidth = parseFloat(
 )
 
 bundleList.addEventListener('click', (e) => {
+  if (e.target.tagName != 'SPAN') return ;
+  
   const index = e.target.parentElement.dataset.index ;
 
   setActive(index, bundleList.children, panorama) ;
