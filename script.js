@@ -10,7 +10,7 @@ const bundleArticleWidth = parseFloat(
 )
 
 bundleList.addEventListener('click', (e) => {
-  const index = e.target.closest('li').dataset.index ;
+  const index = e.target.parentNode.dataset.index ;
 
   setActive(index, bundleList.children, panorama) ;
 })
@@ -23,7 +23,7 @@ bundleList.addEventListener('click', (e) => {
  */
 function setActive(index, children, panorama) {
   const currentActive = document.querySelector('.active');
-  currentActive?.classList.remove('active') ;
+  currentActive.classList.remove('active') ;
 
   children[index].classList.add('active') ;
 
