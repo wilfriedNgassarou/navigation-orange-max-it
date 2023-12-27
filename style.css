@@ -1,0 +1,140 @@
+/* DEBUT STYLES DE BASE  */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  font-size: 9pt;
+}
+
+/* FIN STYLEs DE BASE  */
+
+
+h2{
+  width: 375px;
+  margin: 1rem auto;
+  padding: .5rem 0;
+  font-size: 14pt;
+  text-align: center;
+  background-image: linear-gradient(to right, rgb(245, 130, 7), rgb(248, 217, 160));
+}
+
+h3 {
+  font-size: 10pt;
+  line-height: 1.4;
+  margin-bottom: .6rem;
+  font-weight: normal;
+  text-align: center;
+}
+
+
+.container {
+  width: 375px;
+  margin: 2rem auto;
+  display: flex;
+}
+
+
+.bundle-container {
+  width: 60% !important;
+
+  & ul {
+    height: 100%;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    gap: .3rem;
+  } 
+
+  & li {
+    cursor: pointer;
+    position: relative;
+    border: 2px solid white;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+
+    & span {
+      display: inline-block;
+      height: 100%;
+      width: 60%;
+      display: flex;
+      align-items: center;
+      /* justify-content: center; */
+      padding: .4rem 0;
+      border: 1px solid grey;
+      border-radius: 5px;
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, .4) ;
+    }
+  }
+
+
+  & .active {
+    border: 2px solid rgb(245, 130, 7);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, .4);
+
+    & span {
+      border: none;
+      box-shadow: none;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: 99;
+      right: -6px;
+      top: 0;
+      height: 100%;
+      border-right: 8px solid white;
+    }
+  }
+}
+
+.article-container {
+  width: 40% !important;
+  overflow-x: hidden;
+}
+
+.panorama {
+  width: 300%;
+  display: flex;
+
+  & article {
+    position: relative;
+    z-index: 9;
+    width: 100% ;
+    padding: .5rem ;
+    border-radius: 5px;
+    border: 2px solid rgb(245, 130, 7);
+
+    & ul {
+      display: flex;
+      flex-direction: column;
+      gap: .5rem;
+
+      & li {
+        text-align: center;
+        padding: .4rem .5rem;
+        border: 1px solid grey;
+        border-radius: 5px;
+        cursor: pointer;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, .4) ;
+      }
+    }
+  }
+}
+
+svg {
+  width: 30px;
+  height: 20px;
+}
