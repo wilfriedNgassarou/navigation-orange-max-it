@@ -10,7 +10,7 @@ const bundleArticleWidth = parseFloat(
 )
 
 bundleList.addEventListener('click', (e) => {
-  const index = e.target.parentNode.dataset.index ;
+  const index = e.target.parentElement.dataset.index ;
 
   setActive(index, bundleList.children, panorama) ;
 })
